@@ -1,0 +1,332 @@
+/*
+Theme Name: Stream-reference theme
+
+*/
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* HEAD */
+h2 {
+	color: red;
+}
+@media all and (min-width: 1024px ) {
+.header{
+	
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	
+	list-style: none;
+
+	
+	
+	background-color: #000000;
+
+
+}
+.header a{
+	text-decoration: none;
+}
+
+.header__logo {
+	padding:0 20px;
+	float: left;
+
+	height:80px;
+	vertical-align: middle;
+	
+	background-color: #BDBDBD;
+	
+}
+.header__logo:hover{
+
+	background-color: #E0E0E0;
+}
+
+.header__logo img{
+	display: inline-block;
+	vertical-align: middle;
+	max-height: 60%;
+	width:auto;
+	padding-top: 15px;
+	
+	
+	
+}
+
+.header .menu a{
+	
+	
+	
+	
+	
+	display: block;
+	width:200px;
+	height: 80px;
+	line-height: 80px;
+
+	
+	text-align: center;
+	
+	color: #BDBDBD;
+	
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	
+}
+.header .menu .emplacement1 a{
+
+	
+}
+.header .menu li ul .lienlol{
+	
+
+	
+} 
+.header .menu li ul .first-submenu{
+	border-top: 5px solid #686868;
+	
+	
+	
+	
+} 
+.header .menu li ul li a{
+	text-align: left;
+	display: inline-block;
+	width: 500px;
+
+
+}
+
+.header .menu{
+	
+	list-style-type:none;
+
+
+	
+
+	
+}
+.header .menu li{
+	display: inline-block;
+	position: relative;
+	background-color: black;
+	
+	font-size: 20px;
+
+
+	
+	
+
+}
+.header .menu li ul{
+	list-style: none;
+	position: absolute;
+	display: none;
+	
+}
+.header .menu li ul a{
+	background-color: #686868;
+	color: #BDBDBD;
+}
+.header .menu li ul a{
+	background-color: black;
+}
+.header .menu li:hover > ul{
+	
+	
+	display: block;
+	
+	z-index: 15;
+	
+}
+.header .menu li ul a{
+	border-bottom: 5px solid #686868;
+	border-right: 5px solid #686868;
+	border-left: 5px solid #686868;
+	
+}
+
+
+
+.header .menu a:hover{
+	background-color: #686868;
+	color: black;
+	
+
+}
+.bande-noire3{
+	float: right;
+	width: 100%;
+	height: 5px;
+	background-color: #686868;
+
+
+}
+.bande-noire4{
+	position: absolute;
+	width: 5px;
+	height: 80px;
+	left: 299px;
+	z-index: 10;
+	
+	background-color: #686868;
+
+}
+
+
+
+	
+
+	
+
+
+}
+
+
+
+@media only screen and (max-width: 1023px){
+.header{
+	margin-top: 0;
+	left:0;
+	right: 0;
+	min-height:80px;
+	line-height: 80px;
+	
+	background-color: black;
+	position: static;
+	
+	padding-top: 0;
+	padding-bottom: 0;
+	
+
+
+}
+.site-content{
+	padding-top: 0;
+}
+.header a{
+	text-decoration: none;
+}
+
+.header__logo{
+	padding:0 20px;
+	float: left;
+	height:80px;
+	
+	background-color: #BDBDBD;
+}
+.header__logo img{
+	display: inline-block;
+	vertical-align: middle;
+	max-height: 60%;
+	width:auto;
+	
+	
+	
+}
+
+.header .menu a{
+	
+	display: block;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: black;
+	font-size: 20px;
+	border-bottom: 1px solid black;
+	
+}
+.header .menu{
+	position: absolute;
+	
+	width: 250px;
+	
+	top: 0;
+	right: 80px;
+	bottom: 0;
+	background-color: blue;
+	list-style: none;
+	height: 500px;
+	transform: translateY(-500px);
+	
+	transition-duration: 0.3s;
+	
+
+	
+	
+	
+}
+
+
+.header .menu a:hover{
+	background-color: blue;
+	padding-top: 0%;
+	padding-bottom: 0%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+
+}
+
+
+
+
+
+.header__icon{
+	position: relative;
+	float: right;
+	display: block;
+	width: 80px;
+	height: 80px;
+	background-color: black;
+	
+
+	
+	cursor: pointer;
+}
+.header__icon::after{
+	content: '';
+	position: absolute;
+	display: block;
+	width:30px; 
+	height: 0;
+	top: 20px;
+	box-shadow: 25px 10px 0 2px white, 25px 20px 0 2px white, 25px 30px 0 2px white;
+}
+.with--sidebar .menu{
+	transform: translateY(0px);
+}
+.with--sidebar .header__icon{
+	
+	background-color: black;
+}
+.bande-noire3{
+	float: right;
+	width: 100%;
+	height: 5px;
+	background-color: #686868;
+
+}
+
+
+
+}
+
+
