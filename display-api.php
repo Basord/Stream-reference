@@ -37,7 +37,7 @@ echo '<h2>[ Liste Teams ]</h2>';
 $i=0;
 // Get API Teams
  
-sort($item);
+
 foreach ($twitchInit->getAPI_SearchStreams("LeagueofLegends", 30,0) as $key => $item) {
 	//if ($item['broadcaster_language'] == "en"){
 	
@@ -57,7 +57,25 @@ $i++;
 }	
 
 
+//$testtri = '';
+//foreach ($twitchInit->getAPI_SearchStreams("LeagueofLegends", 30,0) as $key => $item) {
+	//if ($item['broadcaster_language'] == "en"){
+	
 
+	
+	
+	
+	//$testtri .= $item['name']."  <br />
+	//	  ";
+		  
+		 
+	//}
+	//else { echo "string";}
+
+//$i++;
+ 
+//}	
+//echo $testtri;
 
 
 
