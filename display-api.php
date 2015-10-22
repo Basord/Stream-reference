@@ -38,47 +38,49 @@ $i=0;
 // Get API Teams
  
 
-foreach ($twitchInit->getAPI_SearchStreams("LeagueofLegends", 30,0) as $key => $item) {
-	//if ($item['broadcaster_language'] == "en"){
-	
-
-	echo "<h3>Team n°$i</h3>";
-	
-	
-	echo $item['name']." - ".$item['display_name']." - ".$item['created_at']." - ".$item['updated_at']." - ".$item['broadcaster_language']." - ".$item['stream_viewers']." <br />
-		  ";
-		  
-		 echo '<a href="'.$item['url'].'"><img src="'.$item['preview_medium'].'" />';
-	//}
-	//else { echo "string";}
-
-$i++;
- 
-}	
-
-
-//$testtri = '';
 //foreach ($twitchInit->getAPI_SearchStreams("LeagueofLegends", 30,0) as $key => $item) {
 	//if ($item['broadcaster_language'] == "en"){
 	
 
+	//echo "<h3>Team n°$i</h3>";
 	
 	
-	
-	//$testtri .= $item['name']."  <br />
-	//	  ";
+	//echo $item['name']." - ".$item['display_name']." - ".$item['created_at']." - ".$item['updated_at']." - ".$item['broadcaster_language']." - ".$item['stream_viewers']." <br />
+		//  ";
 		  
-		 
+		// echo '<a href="'.$item['url'].'"><img src="'.$item['preview_medium'].'" />';
 	//}
 	//else { echo "string";}
 
 //$i++;
  
 //}	
-//echo $testtri;
 
 
 
+foreach ($twitchInit->getAPI_SearchStreams("LeagueofLegends", 30,0) as $key => $item) {
+	//if ($item['broadcaster_language'] == "en"){
+	
+
+	
+	
+	
+	$testtri .= $item['name']."  <br />
+		  ";
+		  
+		 
+	//}
+	//else { echo "string";}
+$i++;
+ 
+ }	
+echo $testtri;
+
+
+usort($item, function($a,$b){return $a[$stream["viewers"]] > $b[$stream["viewers"]];});
+foreach ($twitchInit->getAPI_SearchStreams("LeagueofLegends", 30,0) as $key => $item) {
+	echo  $item['name']." - ".$item['display_name']." - ".$item['created_at']." - ".$item['updated_at']." - ".$item['broadcaster_language']." - ".$item['stream_viewers']." <br /> ";
+}
 
 
 ?>
