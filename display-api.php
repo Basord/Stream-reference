@@ -77,10 +77,10 @@ $i++;
 echo $testtri;
 
 
-usort($item, function($a,$b){return $a[$stream["viewers"]] > $b[$stream["viewers"]];});
-foreach ($twitchInit->getAPI_SearchStreams("LeagueofLegends", 30,0) as $key => $item) {
-	echo  $item['name']." - ".$item['display_name']." - ".$item['created_at']." - ".$item['updated_at']." - ".$item['broadcaster_language']." - ".$item['stream_viewers']." <br /> ";
-}
+//usort($item, function($a,$b){return $a[$stream["viewers"]] > $b[$stream["viewers"]];});
+//foreach ($twitchInit->getAPI_SearchStreams("LeagueofLegends", 30,0) as $key => $item) {
+//	echo  $item['name']." - ".$item['display_name']." - ".$item['created_at']." - ".$item['updated_at']." - ".$item['broadcaster_language']." - ".$item['stream_viewers']." <br /> ";
+//}
 
 
 ?>
