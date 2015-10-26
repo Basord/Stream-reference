@@ -82,5 +82,18 @@ echo $testtri;
 //	echo  $item['name']." - ".$item['display_name']." - ".$item['created_at']." - ".$item['updated_at']." - ".$item['broadcaster_language']." - ".$item['stream_viewers']." <br /> ";
 //}
 
+echo "<hr/>";
+global $wpdb;
+//$testbdd = $wpdb->query("CREATE TABLE IF NOT EXISTS {$wpdb->prefix}zero_newsletter_email (id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(255) NOT NULL);");
+
+	
+$testbdd = $wpdb->get_results('SELECT * FROM wp_streams', ARRAY_A) ;
+foreach ($testbdd as $testaff ) {
+echo $testaff['nom'] ?> <?php ;
+}
+var_dump($testbdd) ;
+
+
+
 
 ?>
