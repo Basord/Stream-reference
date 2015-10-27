@@ -14,6 +14,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
+	direction : ltr;
 }
 
 /* HEAD */
@@ -167,15 +168,19 @@ h2 {
 	
 
 }
-.bande-noire3{
+.separation{
+	position: absolute;
+	
 	float: right;
 	width: 100%;
 	height: 5px;
 	background-color: #686868;
+	z-index: 10;
+	
 
 
 }
-.bande-noire4{
+.bande-noire1{
 	position: absolute;
 	width: 5px;
 	height: 80px;
@@ -186,11 +191,139 @@ h2 {
 
 }
 
+#fond {
+	width: 100%;
+	height:100%;
+	
+	
+	background-color: #EEEEEE;
+	/*margin-top: -50px;*/
+	position: absolute;
+	
 
+}
+
+
+
+#places {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	
+	width: 90%;
+	height: 100%;
+	margin: auto;
+	margin-top: 50px;
 
 	
 
+}	
+ #box-place {
+ 	width:68%;
+ 	height: 800px;
+ 	flex: none;
+ 	background-color: white;
+ 	margin-right: 2%;
+ 	border-radius: 3px;
+ 	box-shadow: 0px 0.05px 5px black; 
+
+ 	
+ 	
+ 	
+ 	
+ }
+ #news-place{
+ 	flex: none;
+ 	height: 300px;
+ 	background-color: white;
+ 	width: 30%;
+ 	border-radius: 3px;
+ 	box-shadow: 0px 0.05px 5px black;
+ 	
+
+ 	
+ }
+ .box {
+	-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing : border-box;
+	width: 95%;
+	height: 125px; 
+	margin: auto;
+	background-color: white;
+	box-shadow: 0px 1px 5px #656565; 
+	border-radius: 2px;
+	margin-top: 10px;
+	border:2px solid #686868;
+	margin-top: 15px;
+
+
+}
+.box .left-part {
+	width: 15%;
+	height: 100%;
+	border-right: 2px solid #686868; 
+
 	
+}
+
+
+.box .left-part .logo-streamer{
+	width: 85%;
+	margin: auto;
+	height:60%;
+	background-color: #BDBDBD;
+	;
+	padding-top: 5%;
+
+}	
+.box .left-part .calendrier-stream{
+	width: 85%;
+	margin: auto;
+	height:25%;
+	position: relative;
+	background-color: #009261;
+	margin-top: 3%;
+
+}
+
+/* Modifier plus tard les 3 blocs si dessous (le p et le a du calendrier par ce que là c'est fait en mode yolo) */
+
+.box .left-part .calendrier-stream p{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	top: 25%;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	color: white;
+	font-family: Arial;
+	position: absolute;
+	z-index: 8;
+	
+	
+
+	
+
+}
+.box .left-part .calendrier-stream a{
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	z-index: 10;
+}
+.box .left-part .calendrier-stream a:hover{
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
+	display: block;
+	opacity: 0.5;
+	
+}
+
 
 
 }
@@ -317,13 +450,22 @@ h2 {
 	
 	background-color: black;
 }
-.bande-noire3{
+.separation{
+	position: absolute;
 	float: right;
 	width: 100%;
 	height: 5px;
 	background-color: #686868;
 
 }
+.bande-noire1{
+	position: absolute;
+	width: 5px;
+	height: 80px;
+	left: 299px;
+	z-index: 10;
+	
+	background-color: #686868;
 
 
 

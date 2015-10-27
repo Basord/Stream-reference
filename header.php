@@ -16,8 +16,9 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-	<div class="bande-noire4"></div><div class="bande-noire5"></div>
+	<div id="fond"> <! la div se finit dans index >
 	<header class="header">
+	<div class="bande-noire1"></div>
 		<a href="#" class="header__icon" id="header__icon"></a>
 		<a href="#" class="header__logo"><img src="/workspace/Stream-reference/wordpress/wp-content/themes/Stream-reference/images/logo.png"></a>
 			
@@ -46,8 +47,10 @@
 			</li>
 		</ul>
 
+	
+	<div class="separation"></div>
 	</header>
-	<div class="bande-noire"></div><div class="bande-noire2"></div><div class="bande-noire3"></div><div class="bande-noire6"></div>
+	
 	<div class="site-content"></div> <! Pour que le contenu du site s'affiche juste apres le header (qu'il n'y est pas d'espace quoi) >
 	<!-- <iframe name="programme tele" src="http://www.tv-express.com/programme-tv/index.php?cf=CACBC2&theme=0&nbCase=2&chaine=0" width="620" height="1820" frameborder=0 scrolling=auto><a href="http://www.tv-express.com" title="programme tv">programme television</a></iframe> -->
 
