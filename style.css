@@ -223,7 +223,7 @@ h2 {
  	display: -webkit-flex;
 	display: -moz-flex;
  	display: flex;
- 	margin-top: 50px;
+ 	margin-top: 100px;
  	width: 90%;
  	height: 50px;
  	margin-right: auto;
@@ -238,13 +238,21 @@ h2 {
  	
  }
  #titre-programme{
- 	width: 100%;
+ 	width: 30%;
  	height: 100%;
  	background-color: black;
 	box-shadow: 0px 0.05px 5px black;
 	border-radius: 10px 10px 0 0;
 
  }
+   #titre-programme h1{
+  	color: #BDBDBD;
+ 	font-size: 1.8vw;
+ 	text-align: center;
+ 	font-family: helvetica;
+ 	height: 50px;
+ 	line-height: 50px;
+}
 
  #container-titre-news{
 	flex: none;
@@ -253,13 +261,22 @@ h2 {
 	
  }
  #titre-news{
- 	width: 42%;
+ 	width: 40%;
  	height: 100%;
  	background-color: black;
  	box-shadow: 0px 0.05px 5px black;
  	border-radius: 10px 10px 0 0;
+ 	
  }
- #box-place {
+  #titre-news h1{
+  	color: #BDBDBD;
+ 	font-size: 1.8vw;
+ 	text-align: center;
+ 	font-family: helvetica;
+ 	height: 50px;
+ 	line-height: 50px;
+}
+ #programme-accueil {
  	width:68%;
  	height: 800px;
  	flex: none;
@@ -269,14 +286,15 @@ h2 {
  	
  	box-shadow: 0px 0.05px 5px black;
 
+
  	
  	
  	
  	
  }
- #news-place{
+ #news-accueil{
  	flex: none;
- 	height: 300px;
+ 	height: 600px;
  	background-color: white;
  	width: 30%;
  	border-radius: 3px;
@@ -370,6 +388,8 @@ h2 {
 	display: flex;
 }
 .box .right-part .groupe-emissions .emissions{
+	display: -webkit-flex;
+	display: -moz-flex;
 	display: flex;
 	width: 45%;
 	height: 90%;
@@ -501,7 +521,51 @@ h2 {
 
 
 }
-
+.boxnews{
+	-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing : border-box;
+    display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	flex-direction:column;
+	width: 95%;
+	height: 250px; 
+	margin: auto;
+	/*
+	background-color: blue;
+	*/
+	margin-top: 15px;
+}
+.boxnews .boxnewstitre{
+	width: 100%;
+	height: 40px;
+	
+}
+.boxnews .boxnewstitre .titrenews{
+	width: 100%;
+	height: 40px;
+	background-color: red;
+	
+}
+.boxnews .boxnewscontenu{
+	width: 100%;
+	height: 210px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	
+}
+.boxnews .boxnewscontenu .textenews{
+	width: 50%;
+	height: 210px;
+	background-color: orange;
+}
+.boxnews .boxnewscontenu .imagenews{
+	width: 50%;
+	height: 210px;
+	background-color: green;
+}
 }
 
 

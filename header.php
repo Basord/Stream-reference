@@ -19,35 +19,36 @@
 	<div id="fond"> <! la div se finit dans index >
 	<header class="header">
 	<div class="bande-noire1"></div>
-		<a href="#" class="header__icon" id="header__icon"></a>
-		<a href="#" class="header__logo"><img src="/workspace/Stream-reference/wordpress/wp-content/themes/Stream-reference/images/logo.png"></a>
+		<nav id="menu">
+			<a href="#" class="header__icon" id="header__icon"></a>
+			<a href="#" class="header__logo"><img src="/workspace/Stream-reference/wordpress/wp-content/themes/Stream-reference/images/logo.png"></a>
 			
-		<ul class="menu">
-			<li class="emplacement1">
+			<ul class="menu">
+				<li class="emplacement1">
 			
-				<a href="#">Programme</a>
-					<ul class="sousmenu1">
-						<li><a href="#" class="first-submenu"> -Programme  complet</a></li>
-						<li><a href="#"> -Annuaire</a></li>
+					<a href="#">Programme</a>
+						<ul class="sousmenu1">
+							<li><a href="#" class="first-submenu"> -Programme  complet</a></li>
+							<li><a href="#"> -Annuaire</a></li>
 						
-					</ul>
+						</ul>
 
-			</li>
-			<li class="emplacement2">
-				<a href="#"><div>Trouver </div></a>
+				</li>
+				<li class="emplacement2">
+					<a href="#"><div>Trouver </div></a>
 					
-			</li>
-			<li class="emplacement3">
-				<a href="#">News</a>
-				<ul class="sousmenu2">
-					<li><a href="#" class="first-submenu"> -General</a></li>
-					<li><a href="#" class="lienlol"> -League of Legends</a></li>
-					<li><a href="#"> -Hearthstone</a></li>
-				</ul>
-			</li>
-		</ul>
+				</li>
+				<li class="emplacement3">
+					<a href="#">News</a>
+					<ul class="sousmenu2">
+						<li><a href="#" class="first-submenu"> -General</a></li>
+						<li><a href="#" class="lienlol"> -League of Legends</a></li>
+						<li><a href="#"> -Hearthstone</a></li>
+					</ul>
+				</li>
+			</ul>
 
-	
+		</nav>
 	<div class="separation"></div>
 	</header>
 	
