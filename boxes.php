@@ -25,8 +25,11 @@
 					</div>
 					<div class="dureestream">Durée et heure de début/Fin</div>
 					<div class="nomstreamers">Noms streamers</div>
-					<div class="nbviewers">Nb de viewers</div>
-					<div class="lienstream"><a href="#">Stream</a></div>
+					<div class="nbviewers">Nb de viewers et nom du jeu</div>
+					<div class="logoetautre">
+						<div class="placevide"></div>
+						<div class="lienstream"><a href="#">Stream</a></div> <!place vide a cote du lien vers le stream>
+					</div>
 				</div>
 			</div>
 			<div class="emissions">
@@ -42,8 +45,11 @@
 					</div>
 					<div class="dureestream">Durée et heure de début/Fin</div>
 					<div class="nomstreamers">Noms streamers</div>
-					<div class="nbviewers">Nb de viewers</div>
-					<div class="lienstream"><a href="#">Stream</a></div>
+					<div class="nbviewers">Nb de viewers et nom du jeu</div>
+					<div class="logoetautre">
+						<div class="placevide"></div>
+						<div class="lienstream"><a href="#">Stream</a></div>  <!place vide a cote du lien vers le stream>
+					</div>
 				</div>
 				
 			</div>
