@@ -712,6 +712,70 @@ h2 {
 	height: 210px;
 	background-color: green;
 }
+#prototype-galerie{
+	position: relative;
+	background-color: blue;
+	height: 150px;
+	width: 50%;
+	margin: auto;
+	overflow: hidden;
+}
+#prototype-galerie .flechedroite{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 150px;
+	width: 15%;
+	background-color: red;
+	cursor: pointer;	
+	
+	
+
+}
+#prototype-galerie .flechegauche{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 150px;
+	width: 15%;
+	background-color: green;
+	cursor: pointer;	
+	
+}
+#prototype-galerie .prototype-slider{
+	position: relative;
+	margin-left: 15%;
+	width: 5000px;
+	height: 150px;
+	background-color: orange;
+	left: 0%; /* valeur qui va changer avec le javascript*/
+}
+#prototype-galerie .prototype-slider .int-slider{
+	display: inline-block;
+	height: 150px;
+	width: 10%;
+	background-color: yellow;
+	border: 2px solid black;
+}
+/* slider à défilement automatique
+.slideshow {
+   width: 350px;
+   height: 200px;
+   overflow: hidden;
+   border: 3px solid #F2F2F2;
+}
+
+.slideshow ul {
+    
+   width: 400%;
+   height: 200px;
+   padding:0; margin:0;
+   list-style: none;
+}
+.slideshow li {
+   float: left;
+}
+/*
 }
 
 

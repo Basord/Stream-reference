@@ -89,7 +89,7 @@ global $wpdb;
 	
 $testbdd = $wpdb->get_results('SELECT * FROM wp_streams', ARRAY_A) ;
 foreach ($testbdd as $testaff ) {
-echo $testaff['nom'] ?> <?php ;
+echo $testaff['nom_stream'] ?> <?php ;
 }
 var_dump($testbdd) ;
 
