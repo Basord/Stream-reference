@@ -89,11 +89,16 @@ global $wpdb;
 	
 $testbdd = $wpdb->get_results('SELECT * FROM wp_streams', ARRAY_A) ;
 foreach ($testbdd as $testaff ) {
-echo $testaff['nom_stream'] ?> <?php ;
+echo $testaff['nom_stream'] ?><img src="<?php echo $testaff['img_stream'] ?>"/> <?php ;
 }
 var_dump($testbdd) ;
 
 
 
 
+
+
+
+
 ?>
+<img src="/workspace/Stream-reference/wordpress/wp-content/themes/Stream-reference/images/logo.png"/>
