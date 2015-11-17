@@ -1,12 +1,24 @@
 <div class="box">
 <?php
+ $channels = array("nomduchannel") ;                        //D'ici jusqu'à  echo $viewers; c'est pour afficher le nombre de viewers d'un channel (il y a surmenent une maniere plus optimisée qui permettra d'abord de récupérer toutes les infos des channels qu'on veut en une seule requête et de trier apres) 
+	$callAPI = implode(",",$channels);
+	$dataArray = json_decode(@file_get_contents('https://api.twitch.tv/kraken/streams?channel=' . $callAPI), true);
+
+	foreach($dataArray['streams'] as $mydata){                      //On peut changer le $mydata par ce qu'on veut c'est juste une clé je crois (genre on peut mettre itme comme aux trucs au dessus)
+    	if($mydata['_id'] != null){
+        $name      = $mydata['channel']['display_name'];
+        $viewers =   $mydata['viewers'];
+    	}
+	}
+	echo $viewers;
 global $wpdb;
-//$testbdd = $wpdb->query("CREATE TABLE IF NOT EXISTS {$wpdb->prefix}zero_newsletter_email (id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(255) NOT NULL);");
+
 
 	
 $testbddboxes = $wpdb->get_results('SELECT * FROM wp_streams where wp_streams.id=0' , ARRAY_A) ;
 foreach ($testbddboxes as $testaff ) {
 ?> <?php ;
+
 ?>
 	<div class="left-part">
 		<div class="logo-streamer">
@@ -34,7 +46,7 @@ foreach ($testbddboxes as $testaff ) {
 					</div>
 					<div class="dureestream">Durée et heure de début/Fin</div>
 					<div class="nomstreamers"><?php echo $testaff['nom_stream'] ?></div>
-					<div class="nbviewers">Nb de viewers et nom du jeu</div>
+					<div class="nbviewers"><?php echo $viewers; ?></div>
 					<div class="logoetautre">
 						<div class="placevide"></div>
 						<div class="lienstream"><a href="#">Stream</a></div> <!place vide a cote du lien vers le stream>
