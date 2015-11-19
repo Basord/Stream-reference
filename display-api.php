@@ -93,10 +93,12 @@ global $wpdb;
 	
 $testbdd = $wpdb->get_results('SELECT * FROM wp_streams', ARRAY_A) ;
 foreach ($testbdd as $testaff ) {
+
 echo $testaff['nom_stream'] ?><img src="<?php echo $testaff['img_stream'] ?>"/> <?php ;
 }
 //var_dump($testbdd) ;
-
+$testrecuperation = $wpdb->get_results('SELECT * FROM wp_streams', ARRAY_A) ;
+print_r($testrecuperation); 
 
 
 
@@ -140,7 +142,41 @@ $data = array();
 	}
 	echo $viewers;
 
+	$dataArray2 = json_decode(@file_get_contents('https://api.twitch.tv/kraken/streams?channel=Kgerie,etsalutdit,SardocheLol,sardochelol,OgamingLoL' ), true);  //Découverte du fait que si on met des virules dans l'url entre les noms ça permet de faire une requête pour plusieurs channels à la fois
+                                                                                                        // Ici ce sont juste des noms de channels pris en exemple pour le test
+	foreach($dataArray2['streams'] as $mydata){                      
+    	if($mydata['_id'] != null){
+        $name      = $mydata['channel']['display_name'];
+        $viewers =   $mydata['viewers'];
+        echo $viewers;
+		echo $name;
+		echo "<br/>";
+    	}
+	}
+	echo "<hr/>";
+	$channels3 = array("Kgerie,etsalutdit,SardocheLol,sardochelol,OgamingLoL,Narkuss_lol") ;                        //Il suffit de mettre des virgules entre les noms pour chercher plusieurs channels en meme temps 
+	$callAPI3 = implode(",",$channels3);                                                                // Les channels sont apres classés par nombre de viewers
+	$dataArray3 = json_decode(@file_get_contents('https://api.twitch.tv/kraken/streams?channel=' . $callAPI3), true);
 
+	foreach($dataArray3['streams'] as $mydata){                      
+    	if($mydata['_id'] != null){
+        $name      = $mydata['channel']['display_name'];                  //Il faut réussir à associer le nom du stream à la BDD
+        $viewers =   $mydata['viewers'];                                  
+        $id = $mydata['_id'];                                             //Pour pouvoir faire ça on va lier l'ID (et peut être faire en sorte que quand l'id du streamer de l'api corresponde à quelque chose)                           
+    	}
+    	
+    	
+    	echo $viewers;
+		echo $name;
+		echo $id;
+		echo "<br/>";
+
+		
+
+	}
+	
+
+print_r($dataArray3);
 
 ?>
 <!--  <img src="/workspace/Stream-reference/wordpress/wp-content/themes/Stream-reference/images/logo.png"/> --> 
