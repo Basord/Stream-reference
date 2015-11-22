@@ -1,16 +1,17 @@
 <?php
 
 
-get_header();
+//get_header();
 
 ?>
 
 <?php
 
-get_template_part('accueil');
+//get_template_part('accueil');
 //get_template_part('slider');
 
-get_template_part('display-api');
+//get_template_part('display-api');
+get_template_part('nbviewers');
 
 
 

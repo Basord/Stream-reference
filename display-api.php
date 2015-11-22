@@ -174,9 +174,66 @@ $data = array();
 		
 
 	}
+
+	
+	echo "<hr/>";
+	if ($name == "OgamingLoL" ){
+		echo $viewers;
+	}
+	echo "<hr/>";
+	
+var_dump($dataArray3);
+echo "<hr/>";
+print_r($dataArray3);
+echo "<hr/>";
+
+foreach($dataArray3['streams'] as $mydata){                      
+    	if($mydata['_id'] == 71852533){
+        $name      = $mydata['channel']['display_name'];                  //Il faut réussir à associer le nom du stream à la BDD
+        $viewers =   $mydata['viewers'];                                  
+        $id = $mydata['_id'];                                             //Pour pouvoir faire ça on va lier l'ID (et peut être faire en sorte que quand l'id du streamer de l'api corresponde à quelque chose)                           
+    	}
+    	
+    	
+    	echo $viewers;
+		echo $name;
+		echo $id;
+		echo "<br/>";
+
+		
+
+	}	
+
+	print_r($dataArray3['streams'][0]);
+	echo "<hr/>";
+	
+	if (in_array($_id == 17819231760, $dataArray3['streams'][0])) {          
+			echo "ca marche";
+			echo $dataArray3['streams'][0]['viewers'];
+	}
+	echo "<br/>";
+		
+	
+$dataArray3['streams'][0] = $teststreamindividuel;                                   // Cette variable n'est a crée qu'une seul fois elle est nécessaire pour pouvoir faire les boucles if
+                                                                                 //Il sera nécessaire de faire une boucle If pour chaque streamer (sauf si il y a une autre solution mais je crois pas)
+    	if($teststreamindividuel['_id'][0] == 71852533){                            //On a réussi a ne prendre les informations que d'un seul stream, mais je crois qu'il faudra mettre le nombre de viewer de chaque streamer associé à une variable différente
+        $name      = $mydata['channel']['display_name'];                  
+        $viewers =   $mydata['viewers'];                                  
+        $id = $mydata['_id'];                                                                        
+    	}
+    	
+    	
+    	echo $viewers;
+		echo $name;
+		echo $id;
+		echo "<br/>";
+echo "<hr/>";
+
+
 	
 
-print_r($dataArray3);
+	
+
 
 ?>
 <!--  <img src="/workspace/Stream-reference/wordpress/wp-content/themes/Stream-reference/images/logo.png"/> --> 
