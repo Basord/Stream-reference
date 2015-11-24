@@ -16,22 +16,47 @@ foreach($dataArray['streams'] as $mydata){
 	}
 }
 
-
-function getnbviewers($iddirecttableau, $viewersdirecttableau,$idstreamers,$nbviewers){  //Les deux dernieres valeurs seront a changer a chaque fois qu'on appelle la fonction.
+var_dump($iddirecttableau);
+$arrayallnbviewers = array();
+function getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers,$nbviewers){  //Les deux dernieres valeurs seront a changer a chaque fois qu'on appelle la fonction.
 	$i = 0;
+	
 	for ($iddirecttableau[$i]; $i < 100; $i++) { 
 		if($iddirecttableau[$i] != null ){
 			if ($iddirecttableau[$i] == $idstreamers) {
 				$nbviewers = $viewersdirecttableau[$i];           //Pour vérifier que ca marche mettre un echo $nbviewers; sur la ligne d'après
+				
 			}
 		}
 	}
+	return $nbviewers;
+	
 }
 
 
-getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers1, $nbviewers1);  //1ere ligne des fonctions pour recup le nb de viewers, mettre le bon nom de variable dans laquelle on recupere le nombre de vue pour pouvoir l'utiliser apres.
+getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers1, $nbviewers1);  //1ere ligne des fonctions pour recup le nb de viewers, mettre le bon nom de variable dans laquelle on recupere le nombre de vue pour pouvoir l'utiliser apres.
 
-getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers2, $nbviewers2);
+getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers2, $nbviewers2);
+
+
+
+$nbviewers = getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers2, $nbviewers2);  //Bon bah c'est à partir de la pour mettre les nbviewers dans un tableau, d'abord on a vu comme il fallait faire pour pouvoir afficher le résultat de la fonction et pares on voit comment ajouter a un tableau.
+
+$newarraytotal = array();
+
+echo $nbviewers;
+
+$nbviewers = getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers1, $nbviewers1);
+
+array_push($newarraytotal,$nbviewers);
+
+$nbviewers = getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers2, $nbviewers2);
+
+array_push($newarraytotal,$nbviewers);
+
+
+var_dump($newarraytotal);
+print_r($newarraytotal);
 
 //$time_start = microtime(true);  //Calcul du temps d'un script
 
