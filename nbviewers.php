@@ -1,6 +1,6 @@
 <?php
 
-$channels = array("MilleniumTVLoL,LEKADAYZ,Mactorlol,Furiie,Gardoum,Rekkles,yuniko0720,OgamingLoL,jiahao2") ;                         
+$channels = array("MilleniumTVLoL,LEKADAYZ,Mactorlol,Furiie,Gardoum,Rekkles,yuniko0720,OgamingLoL,jiahao2,Calliev2,esl_PinkWard") ;                         
 $callAPI = implode(",",$channels);                                                                
 $dataArray = json_decode(@file_get_contents('https://api.twitch.tv/kraken/streams?channel=' . $callAPI), true);
 
@@ -191,25 +191,86 @@ function in_multi_array2($ii, $jj)
     // Couldn't find the value in array
     return false;
 }
+echo "<hr/>";
+${$i."table"} = $dataArray['streams'][1]['channel'];
+var_dump(${$i."table"});
 
 
-
-
-
-
-function search_array($oo, $jj) {
-     if(in_array($oo, $jj)) {
-          return true;
-          echo "cava";
-     }
-     foreach($jj as $element) {
-          if(is_array($element) && search_array($jj, $element))
-               return true;
-           echo "cava";
-     }
-   return false;
-   echo "cava";echo "cava";                     //Normalement c'est comme ca que ca marche mais j'arrive pas a afficher des trucs dans la fonction
+if (in_array($_id == 88398531, ${$i."table"})) {          
+			echo $dataArray['streams'][0]['viewers'];
 }
+elseif (in_array($_id == 88398531, ${$i."table"})) {          
+			echo $dataArray['streams'][1]['viewers'];
+}
+elseif (in_array($_id == 88398531, ${$i."table"})) {          
+			echo $dataArray['streams'][2]['viewers'];
+}
+elseif (in_array($_id ==88398531, ${$i."table"})) {          
+			echo $dataArray['streams'][3]['viewers'];
+}
+$i = 0;
+
+echo "<hr/>";
+
+for ($dataArray['streams'][$i]; $i < 100; $i++) { 
+	if($dataArray['streams'][$i] != null ){
+		$arraycontenant = $dataArray['streams'][$i]['channel'];
+		if (in_array($_id == 88398531, $arraycontenant)) {          
+			echo $dataArray['streams'][$i]['viewers'];
+		}
+	}
+}
+echo "<hr/>";
+$i = 0;
+
+foreach($dataArray['streams'] as $mydata){     
+	if($mydata != null ){
+		$iddirecttableau[] = $mydata['channel']['_id'];
+		$viewersdirecttableau[] = $mydata['viewers'];
+	}
+}
+echo $viewersdirecttableau[0];
+var_dump($iddirecttableau);
+var_dump($viewersdirecttableau);
+$i = 0;
+for ($iddirecttableau[$i]; $i < 100; $i++) { 
+	if($iddirecttableau[$i] != null ){
+		if ($iddirecttableau[$i] == 88398531) {          
+			echo $viewersdirecttableau[$i];
+		}
+	}
+}
+$i = 0;
+
+echo "<br/>";
+for ($iddirecttableau[$i]; $i < 100; $i++) { 
+	if($iddirecttableau[$i] != null ){
+		if ($iddirecttableau[$i] == 94437681) {          
+			echo $viewersdirecttableau[$i];
+		}
+	}
+}
+
+echo "<br/>";
+$i = 0;
+for ($dataArray['streams'][$i]; $i < 100; $i++) { 
+	if($dataArray['streams'][$i] != null ){
+		${$i."table"} = $dataArray['streams'][$i]['channel'];
+		if (in_array($_id = 88398531, ${$i."table"})) {          
+			echo $dataArray['streams'][$i]['viewers'];
+		}
+	}
+}
+
+
+//${$i."un"}=31;    //Concatener un nom de variable avec un autre
+//echo ${$i."un"};
+
+
+
+
+
+
 
 
 	
