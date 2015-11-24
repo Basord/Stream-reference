@@ -21,206 +21,7 @@ foreach($dataArray['streams'] as $mydata){                             //Boucle 
 
 }
 
-var_dump($dataArray['streams']);
-print_r($dataArray['streams'][0]['channel']['display_name']);
 
-$i = 0;                                                                                            //Boucle pour trouver le nombre de viewers d'un stream enparticulier
-for ($dataArray['streams'][$i]['channel']; $i < 100; $i++) {                                                 //Changer le <100 si il y a plus de 100 streamers     
-	if($dataArray['streams'][$i]['channel'] != null ){
-		if (in_array($_id = 28964954 , $dataArray['streams'][$i]['channel'])) {          
-			echo $dataArray['streams'][$i]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-		}
-	}
-}
-$i = 0;
-
-echo "<br/>";   //Enlever les br/ apres si on veut incorporer le script dans une autre page
-
-$i = 0;                                                                                            //Boucle pour trouver le nombre de viewers d'un stream enparticulier
-for ($dataArray['streams'][$i]['channel']; $i < 100; $i++) {                                                 //Changer le <100 si il y a plus de 100 streamers     
-	if($dataArray['streams'][$i]['channel'] != null ){
-		if (in_array($_id = 28964954 , $dataArray['streams'][$i]['channel'])) {          
-			echo $dataArray['streams'][$i]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-		}
-	}
-}
-
-echo "<br/>";   //Enlever les br/ apres si on veut incorporer le script dans une autre page
-$test1 = array("nn" => "tt" , "jj" => array("oo" => "dd" , "uu" => "ii"));
-
-if (in_array($jj = array("oo" => "dd" , "uu" => "ii") , $test1)) { echo "cava"; }
-
-if (in_array($channel = array('_id' => 28964954) , $dataArray['streams'][0])) {          
-			echo $dataArray['streams'][0]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-elseif (in_array($channel = array('_id' => 28964954), $dataArray['streams'][1])) {          
-			echo $dataArray['streams'][1]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-elseif (in_array($channel = array('_id' => 28964954), $dataArray['streams'][2])) {          
-			echo $dataArray['streams'][2]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-elseif (in_array($channel = array('_id' => 28964954), $dataArray['streams'][3])) {          
-			echo $dataArray['streams'][3]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-//var_dump($dataArray['streams'][3]);
-
-echo "<br/>";   //Enlever les br/ apres si on veut incorporer le script dans une autre page
-$i = 0;
-for ($dataArray['streams'][$i]; $i < 100; $i++) { 
-	if($dataArray['streams'][$i] != null ){
-	if (in_array($channel = array('_id' => 28964954) , $dataArray['streams'][$i])) {          
-			echo $dataArray['streams'][$i]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-			echo "tamer";
-		}
-	}
-}
-echo "<br/>";   //Enlever les br/ apres si on veut incorporer le script dans une autre page
-$i = 0;
-
-for ($dataArray['streams'][$i]; $i < 100; $i++) { 
-	if($dataArray['streams'][$i] != null ){
-	if (in_array($_id = 28964954 , $dataArray['streams'][$i]['channel'])) {          
-			echo $dataArray['streams'][$i]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-			echo "tamer";
-		}
-	}
-}
-$i = 0;
-
-
-echo "<br/>"; 
-if (in_array($jj = array("oo" => "dd" , "uu" => "ii") , $test1)) { echo "cava"; }
-
-if (in_array(in_array($_id == 28964954, $channel), $dataArray['streams'][0])) {          
-			echo $dataArray['streams'][0]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-elseif (in_array(in_array($_id == 28964954, $channel), $dataArray['streams'][1])) {          
-			echo $dataArray['streams'][1]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-elseif (in_array(in_array($_id == 28964954, $channel), $dataArray['streams'][2])) {          
-			echo $dataArray['streams'][2]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-elseif (in_array(in_array($_id = 28964954, $channel), $dataArray['streams'][3])) {          
-			echo $dataArray['streams'][3]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-
-
-echo "<br/>";   //Enlever les br/ apres si on veut incorporer le script dans une autre page
-
-if (in_array(in_array(28964954, $channel, true), $dataArray['streams'][0])) {          
-			echo $dataArray['streams'][0]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-elseif (in_array(in_array(28964954, $channel, true), $dataArray['streams'][1])) {          
-			echo $dataArray['streams'][1]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-elseif (in_array(in_array(28964954, $channel, true), $dataArray['streams'][2])) {          
-			echo $dataArray['streams'][2]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-elseif (in_array(in_array(28964954, $channel, true), $dataArray['streams'][3])) {          
-			echo $dataArray['streams'][3]['viewers'];                                           //Enlever le "echo" et mettre a la place un nom de varaible différent pour chaque stremer qui sera la variable qui recuperera le nombre de viewers du streamer
-}
-
-//Le in_array marche pas donc il faut utiliser une fonction (voir ce dessous et essayer de comprendre)
-
-
-$test1 = array("nn" => "tt" , "jj" => array("oo" => "dd" , "uu" => "ii"));
-// Function for looking for a value in a multi-dimensional array
-function in_multi_array($value, $array)
-{   
-    foreach ($array as $key => $item)
-    {       
-        // Item is not an array
-        if (!is_array($item))
-        {
-            // Is this item our value?
-            if ($item == $value) return true;
-        }
-        
-        // Item is an array
-        else
-        {
-            // See if the array name matches our value
-            //if ($key == $value) return true;
-            
-            // See if this array matches our value
-            if (in_array($value, $item)) return true;
-            
-            // Search this array
-            else if (in_multi_array($value, $item)) return true;
-        }
-    }
-    
-    // Couldn't find the value in array
-    return false;
-
-}
-
-$agateau = in_multi_array($dd, $jj);  //Bon ok j'ai trouvé comment on utilise la fonction pour faire un in_array sur un tableau multidimensionnel mainteant il y a plus qu'à l'appliquer pour mon cas(et espérer que ca soit le fait qu'un in_array ne fonctionne pas sur un tableau multi et qu'il faille faire une fonction)
-if ($agateau = true) {
-	echo "ppp";
-}
-elseif ($agateau = false) {
-	echo "ooo";
-}
-
-function in_multi_array2($ii, $jj)
-{   
-    foreach ($jj as $key => $item)
-    {       
-        // Item is not an array
-        if (!is_array($item))
-        {
-            // Is this item our value?
-            if ($item == $ii) return true;
-        }
-        
-        // Item is an array
-        else
-        {
-            // See if the array name matches our value
-            //if ($key == $value) return true;
-            
-            // See if this array matches our value
-            if (in_array($ii, $item)) return true;
-            
-            // Search this array
-            else if (in_multi_array($ii, $item)) return true;
-        }
-    }
-    
-    // Couldn't find the value in array
-    return false;
-}
-echo "<hr/>";
-${$i."table"} = $dataArray['streams'][1]['channel'];
-var_dump(${$i."table"});
-
-
-if (in_array($_id == 88398531, ${$i."table"})) {          
-			echo $dataArray['streams'][0]['viewers'];
-}
-elseif (in_array($_id == 88398531, ${$i."table"})) {          
-			echo $dataArray['streams'][1]['viewers'];
-}
-elseif (in_array($_id == 88398531, ${$i."table"})) {          
-			echo $dataArray['streams'][2]['viewers'];
-}
-elseif (in_array($_id ==88398531, ${$i."table"})) {          
-			echo $dataArray['streams'][3]['viewers'];
-}
-$i = 0;
-
-echo "<hr/>";
-
-for ($dataArray['streams'][$i]; $i < 100; $i++) { 
-	if($dataArray['streams'][$i] != null ){
-		$arraycontenant = $dataArray['streams'][$i]['channel'];
-		if (in_array($_id == 88398531, $arraycontenant)) {          
-			echo $dataArray['streams'][$i]['viewers'];
-		}
-	}
-}
-echo "<hr/>";
 $i = 0;
 
 foreach($dataArray['streams'] as $mydata){     
@@ -229,7 +30,7 @@ foreach($dataArray['streams'] as $mydata){
 		$viewersdirecttableau[] = $mydata['viewers'];
 	}
 }
-echo $viewersdirecttableau[0];
+
 var_dump($iddirecttableau);
 var_dump($viewersdirecttableau);
 $i = 0;
@@ -240,9 +41,11 @@ for ($iddirecttableau[$i]; $i < 100; $i++) {
 		}
 	}
 }
-$i = 0;
 
 echo "<br/>";
+
+$i = 0;
+
 for ($iddirecttableau[$i]; $i < 100; $i++) { 
 	if($iddirecttableau[$i] != null ){
 		if ($iddirecttableau[$i] == 94437681) {          
@@ -252,15 +55,84 @@ for ($iddirecttableau[$i]; $i < 100; $i++) {
 }
 
 echo "<br/>";
+
 $i = 0;
-for ($dataArray['streams'][$i]; $i < 100; $i++) { 
-	if($dataArray['streams'][$i] != null ){
-		${$i."table"} = $dataArray['streams'][$i]['channel'];
-		if (in_array($_id = 88398531, ${$i."table"})) {          
-			echo $dataArray['streams'][$i]['viewers'];
+
+for ($iddirecttableau[$i]; $i < 100; $i++) { 
+	if($iddirecttableau[$i] != null ){
+		if ($iddirecttableau[$i] == 30506683) {          
+			echo $viewersdirecttableau[$i];
 		}
 	}
 }
+
+function getnbviewers($id, $idstockage){
+
+	
+$i = 0;
+for ($iddirecttableau[$i]; $i < 100; $i++) { 
+	if($iddirecttableau[$i] != null ){
+		if ($iddirecttableau[$i] == $id) {          
+			$idstockage = $viewersdirecttableau[$i];
+			echo $viewersdirecttableau[$i];
+		}
+	}
+	
+}
+return $idstockage;
+}
+$iddunstream = 88398531;
+getnbviewers($iddunstream,$testrecup);
+echo $testrecup;
+var_dump($testrecup);
+
+
+function getnbtest2($iddirecttableau, $viewersdirecttableau){
+	$i = 0;
+
+for ($iddirecttableau[$i]; $i < 100; $i++) { 
+	if($iddirecttableau[$i] != null ){
+		if ($iddirecttableau[$i] == 88398531) {          
+			echo $viewersdirecttableau[$i];
+			
+		}
+	}
+}
+
+}
+
+getnbtest2($iddirecttableau, $viewersdirecttableau);
+
+echo "<br/>";
+
+function getnbtest3($iddirecttableau, $viewersdirecttableau,$idstreamers,$nbviewers){
+	$i = 0;
+
+for ($iddirecttableau[$i]; $i < 100; $i++) { 
+	if($iddirecttableau[$i] != null ){
+		if ($iddirecttableau[$i] == $idstreamers) {          
+			
+			$nbviewers = $viewersdirecttableau[$i];
+			echo $nbviewers;
+		}
+	}
+}
+
+}
+$idstreamers1 = 71852533;
+getnbtest3($iddirecttableau, $viewersdirecttableau,$idstreamers1,$nbviewers1);
+
+
+
+//$time_start = microtime(true);  //Calcul du temps d'un script
+
+//usleep(100);                     //A partir de la mettre a la fin du script
+
+//$time_end = microtime(true);
+//$time = $time_end - $time_start;
+
+//echo "Temps d'éxécution : $time secondes ";
+
 
 
 //${$i."un"}=31;    //Concatener un nom de variable avec un autre
