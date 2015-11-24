@@ -4,25 +4,10 @@ $channels = array("MilleniumTVLoL,LEKADAYZ,Mactorlol,Furiie,Gardoum,Rekkles,yuni
 $callAPI = implode(",",$channels);                                                                
 $dataArray = json_decode(@file_get_contents('https://api.twitch.tv/kraken/streams?channel=' . $callAPI), true);
 
-foreach($dataArray['streams'] as $mydata){                             //Boucle "temoin" pour verifier que les données recoltées dans les autres boucles sont correctes (a supprimer une fois que tout est terminé)
-    if($mydata['_id'] != null){
-        $name      = $mydata['channel']['display_name'];                  
-        $viewers =   $mydata['viewers'];                                  
-        $id = $mydata['_id'];                                                                        
-    }
-    	
-    	
-    echo $viewers;
-	echo $name;
-	echo $id;
-	echo "<br/>";
-
-		
-
-}
 
 
-$i = 0;
+$idstreamers1 = 30506683;  //1ere ligne de l'endroit ou on met les id des streams pour lesquelles on met le nb de viewers, ne pas oublier de mettre le nom de variable qu'on veut dans les fonctions en dessous (à partir de la ligne (enfin juste apres la fonction de base qu'on utilise))
+$idstreamers2 = 88398531;
 
 foreach($dataArray['streams'] as $mydata){     
 	if($mydata != null ){
@@ -31,98 +16,22 @@ foreach($dataArray['streams'] as $mydata){
 	}
 }
 
-var_dump($iddirecttableau);
-var_dump($viewersdirecttableau);
-$i = 0;
-for ($iddirecttableau[$i]; $i < 100; $i++) { 
-	if($iddirecttableau[$i] != null ){
-		if ($iddirecttableau[$i] == 88398531) {          
-			echo $viewersdirecttableau[$i];
-		}
-	}
-}
 
-echo "<br/>";
-
-$i = 0;
-
-for ($iddirecttableau[$i]; $i < 100; $i++) { 
-	if($iddirecttableau[$i] != null ){
-		if ($iddirecttableau[$i] == 94437681) {          
-			echo $viewersdirecttableau[$i];
-		}
-	}
-}
-
-echo "<br/>";
-
-$i = 0;
-
-for ($iddirecttableau[$i]; $i < 100; $i++) { 
-	if($iddirecttableau[$i] != null ){
-		if ($iddirecttableau[$i] == 30506683) {          
-			echo $viewersdirecttableau[$i];
-		}
-	}
-}
-
-function getnbviewers($id, $idstockage){
-
-	
-$i = 0;
-for ($iddirecttableau[$i]; $i < 100; $i++) { 
-	if($iddirecttableau[$i] != null ){
-		if ($iddirecttableau[$i] == $id) {          
-			$idstockage = $viewersdirecttableau[$i];
-			echo $viewersdirecttableau[$i];
-		}
-	}
-	
-}
-return $idstockage;
-}
-$iddunstream = 88398531;
-getnbviewers($iddunstream,$testrecup);
-echo $testrecup;
-var_dump($testrecup);
-
-
-function getnbtest2($iddirecttableau, $viewersdirecttableau){
+function getnbviewers($iddirecttableau, $viewersdirecttableau,$idstreamers,$nbviewers){  //Les deux dernieres valeurs seront a changer a chaque fois qu'on appelle la fonction.
 	$i = 0;
-
-for ($iddirecttableau[$i]; $i < 100; $i++) { 
-	if($iddirecttableau[$i] != null ){
-		if ($iddirecttableau[$i] == 88398531) {          
-			echo $viewersdirecttableau[$i];
-			
+	for ($iddirecttableau[$i]; $i < 100; $i++) { 
+		if($iddirecttableau[$i] != null ){
+			if ($iddirecttableau[$i] == $idstreamers) {
+				$nbviewers = $viewersdirecttableau[$i];           //Pour vérifier que ca marche mettre un echo $nbviewers; sur la ligne d'après
+			}
 		}
 	}
 }
 
-}
 
-getnbtest2($iddirecttableau, $viewersdirecttableau);
+getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers1, $nbviewers1);  //1ere ligne des fonctions pour recup le nb de viewers, mettre le bon nom de variable dans laquelle on recupere le nombre de vue pour pouvoir l'utiliser apres.
 
-echo "<br/>";
-
-function getnbtest3($iddirecttableau, $viewersdirecttableau,$idstreamers,$nbviewers){
-	$i = 0;
-
-for ($iddirecttableau[$i]; $i < 100; $i++) { 
-	if($iddirecttableau[$i] != null ){
-		if ($iddirecttableau[$i] == $idstreamers) {          
-			
-			$nbviewers = $viewersdirecttableau[$i];
-			echo $nbviewers;
-		}
-	}
-}
-
-}
-$idstreamers1 = 71852533;
-getnbtest3($iddirecttableau, $viewersdirecttableau,$idstreamers1,$nbviewers1);
-
-
+getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers2, $nbviewers2);
 
 //$time_start = microtime(true);  //Calcul du temps d'un script
 
@@ -146,18 +55,6 @@ getnbtest3($iddirecttableau, $viewersdirecttableau,$idstreamers1,$nbviewers1);
 
 
 	
-
-
-
-for ($dataArray['streams'][$i]; $i < 100; $i++) { 
-	if($dataArray['streams'][$i] != null ){
-		if (in_array($created_at = '2015-11-22T09:58:04Z', $dataArray['streams'][$i])) {          
-			echo $dataArray['streams'][$i]['viewers'];
-		}
-	}
-}
-$i = 0;
-
 
 
 
