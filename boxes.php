@@ -1,6 +1,6 @@
 <div class="box">
 <?php
- $channels = array("nomduchannel") ;                        //D'ici jusqu'à  echo $viewers; c'est pour afficher le nombre de viewers d'un channel (il y a surmenent une maniere plus optimisée qui permettra d'abord de récupérer toutes les infos des channels qu'on veut en une seule requête et de trier apres) 
+/* $channels = array("nomduchannel") ;                        //D'ici jusqu'à  echo $viewers; c'est pour afficher le nombre de viewers d'un channel (il y a surmenent une maniere plus optimisée qui permettra d'abord de récupérer toutes les infos des channels qu'on veut en une seule requête et de trier apres) 
 	$callAPI = implode(",",$channels);
 	$dataArray = json_decode(@file_get_contents('https://api.twitch.tv/kraken/streams?channel=' . $callAPI), true);
 
@@ -11,14 +11,15 @@
     	}
 	}
 	echo $viewers;
+	
 global $wpdb;
 
 
 	
 $testbddboxes = $wpdb->get_results('SELECT * FROM wp_streams where wp_streams.id=0' , ARRAY_A) ;
 foreach ($testbddboxes as $testaff ) {
-?> <?php ;
-
+?> <?php 
+*/
 ?>
 	<div class="left-part">
 		<div class="logo-streamer">
@@ -78,7 +79,7 @@ foreach ($testbddboxes as $testaff ) {
 		</div>
 	</div>
 	<?php
-	}
+	//}
 ?>
 </div>
 

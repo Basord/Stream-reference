@@ -23,7 +23,7 @@
 						<a class="lienoptiontemps" href="#">Demain</a>
 					</div>
 				</div>
-				<div class="optionslangue">
+				<!-- <div class="optionslangue">
 					<div class="uneoptionlangue">
 						<a class="lienoptionlangue" href="#">FR</a>
 					</div>
@@ -31,7 +31,7 @@
 						<a class="lienoptionlangue-pasdisponible" href="#">ENG</a>
 						<p>soon</p>
 					</div>
-				</div>
+				</div> -->
 				<div class="optionsjeu">
 					<div class="uneoptionjeu">
 						<a class="lienoptionjeu" href="">TOUS</a>
