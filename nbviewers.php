@@ -6,8 +6,10 @@ $dataArray = json_decode(@file_get_contents('https://api.twitch.tv/kraken/stream
 
 
 
-$idstreamers1 = 30506683;  //1ere ligne de l'endroit ou on met les id des streams pour lesquelles on met le nb de viewers, ne pas oublier de mettre le nom de variable qu'on veut dans les fonctions en dessous (à partir de la ligne (enfin juste apres la fonction de base qu'on utilise))
+$idstreamers1 = 47375371;  //1ere ligne de l'endroit ou on met les id des streams pour lesquelles on met le nb de viewers, Alt+F3 pour changer le nom de la varaible à tous les endroits, ne pas oublier de mettre le nom de variable qu'on veut dans les fonctions en dessous (à partir de la ligne (enfin juste apres la fonction de base qu'on utilise))
 $idstreamers2 = 88398531;
+$idstreamers3 = 71852533;
+$idstreamers4 = 28964954;
 
 foreach($dataArray['streams'] as $mydata){     
 	if($mydata != null ){
@@ -17,8 +19,8 @@ foreach($dataArray['streams'] as $mydata){
 }
 
 var_dump($iddirecttableau);
-$arrayallnbviewers = array();
-function getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers,$nbviewers){  //Les deux dernieres valeurs seront a changer a chaque fois qu'on appelle la fonction.
+
+function getnbviewers($iddirecttableau, $viewersdirecttableau,  $idstreamers,$nbviewers){  //Les deux dernieres valeurs seront a changer a chaque fois qu'on appelle la fonction.
 	$i = 0;
 	
 	for ($iddirecttableau[$i]; $i < 100; $i++) { 
@@ -31,32 +33,58 @@ function getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewer
 	}
 	return $nbviewers;
 	
+	
 }
 
-
-getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers1, $nbviewers1);  //1ere ligne des fonctions pour recup le nb de viewers, mettre le bon nom de variable dans laquelle on recupere le nombre de vue pour pouvoir l'utiliser apres.
-
-getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers2, $nbviewers2);
+$newarraytotal = array();         //Tableau dans le quels sont rangées toutes les varaiables contenant le nombre de viewers de chaque streamer
 
 
-
-$nbviewers = getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers2, $nbviewers2);  //Bon bah c'est à partir de la pour mettre les nbviewers dans un tableau, d'abord on a vu comme il fallait faire pour pouvoir afficher le résultat de la fonction et pares on voit comment ajouter a un tableau.
-
-$newarraytotal = array();
-
-echo $nbviewers;
-
-$nbviewers = getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers1, $nbviewers1);
-
+getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers1, $nbviewers1);  //1ere ligne des fonctions pour recup le nb de viewers, mettre le bon nom de variable dans laquelle on recupere le nombre de vue pour pouvoir l'utiliser apres.
+$nbviewers = getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers1, $nbviewers1);   //Ce pack de quatre lignes est nécessaire pour récupérer et ranger le nombre de viewers de chaque streamer
+$nbviewers1 = $nbviewers;
 array_push($newarraytotal,$nbviewers);
 
-$nbviewers = getnbviewers($iddirecttableau, $viewersdirecttableau, $arrayallnbviewers, $idstreamers2, $nbviewers2);
-
+getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers2, $nbviewers2);
+$nbviewers = getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers2, $nbviewers2);
+$nbviewers2 = $nbviewers;
 array_push($newarraytotal,$nbviewers);
+
+getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers3, $nbviewers3);
+$nbviewers = getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers3, $nbviewers3);
+$nbviewers3 = $nbviewers;
+array_push($newarraytotal,$nbviewers);
+
+getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers4, $nbviewers4);
+$nbviewers = getnbviewers($iddirecttableau, $viewersdirecttableau, $idstreamers4, $nbviewers4);
+$nbviewers4 = $nbviewers;
+array_push($newarraytotal,$nbviewers);
+
+
+
+
 
 
 var_dump($newarraytotal);
 print_r($newarraytotal);
+
+$nbopif = 54;                                                                 //Moyen de mettre le nb de viewers dans un array qui contient un array par nom dans lequel se trouve le nb de viewers;
+$testarray = array( "pi" => array( "pu" => "po", "pl" => $nbopif ) );         //Mais on peut deja savoir a quel numero appartient  quel nb de viewers car ils sont classé dans le tableau par l'ordre d'appel
+$testcherche = array_column($testarray, "pl");                                //Pour prendre les valeurs associer à des clés dans plusieurs tableaux qui sont dans un meme tableau
+
+
+global $wpdb;
+
+
+$wpdb->update('wp_streams',array('nb_viewers' => $nbviewers1),array('id' => 0));  //Voila voila pour mettre le nombre de viewer dans la BDD, là c'est la requête que pour un stream
+
+$testbdd = $wpdb->get_results('SELECT * FROM wp_streams ORDER BY nb_viewers DESC', ARRAY_A) ;   //Affichage par nb de viewers décroissant
+foreach ($testbdd as $testaff ) {
+
+echo $testaff['nom_stream'];
+}
+//usort($newarraytotal, function($a,$b) {return $a < $b ;});  //Pour trier les nb de viewers par ordre (dé)croissant mais pas nécessaire vu qu'on le fait en SQL
+
+
 
 //$time_start = microtime(true);  //Calcul du temps d'un script
 
