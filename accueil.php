@@ -9,7 +9,6 @@
 	</div>
 
 	<div id="places">
-		
 		<section id="programme-accueil">
 			<div id="container-optionsprogramme">
 				<div class="optionstemps">
@@ -60,6 +59,7 @@
 			</div>
 		</section>
 	</div>	
+	
 
 
 </section>

@@ -1,9 +1,8 @@
 <div class="box">
 <?php
-/* $channels = array("nomduchannel") ;                        //D'ici jusqu'à  echo $viewers; c'est pour afficher le nombre de viewers d'un channel (il y a surmenent une maniere plus optimisée qui permettra d'abord de récupérer toutes les infos des channels qu'on veut en une seule requête et de trier apres) 
+ $channels = array("MilleniumTVLoL") ;                        //D'ici jusqu'à  echo $viewers; c'est pour afficher le nombre de viewers d'un channel (il y a surmenent une maniere plus optimisée qui permettra d'abord de récupérer toutes les infos des channels qu'on veut en une seule requête et de trier apres) 
 	$callAPI = implode(",",$channels);
 	$dataArray = json_decode(@file_get_contents('https://api.twitch.tv/kraken/streams?channel=' . $callAPI), true);
-
 	foreach($dataArray['streams'] as $mydata){                      //On peut changer le $mydata par ce qu'on veut c'est juste une clé je crois (genre on peut mettre itme comme aux trucs au dessus)
     	if($mydata['_id'] != null){
         $name      = $mydata['channel']['display_name'];
@@ -11,15 +10,11 @@
     	}
 	}
 	echo $viewers;
-	
 global $wpdb;
-
-
 	
 $testbddboxes = $wpdb->get_results('SELECT * FROM wp_streams where wp_streams.id=0' , ARRAY_A) ;
 foreach ($testbddboxes as $testaff ) {
-?> <?php 
-*/
+?> <?php ;
 ?>
 	<div class="left-part">
 		<div class="logo-streamer">
@@ -79,7 +74,7 @@ foreach ($testbddboxes as $testaff ) {
 		</div>
 	</div>
 	<?php
-	//}
+	}
 ?>
 </div>
 
@@ -88,4 +83,3 @@ foreach ($testbddboxes as $testaff ) {
 <div class="box"></div>
 <div class="box"></div>
 <div class="box"></div>
-

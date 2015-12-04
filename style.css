@@ -210,9 +210,10 @@ h2 {
 	display: -moz-flex;
 	display: flex;
 	
-	width: 90%;
+	width: 80%;
 	height: 100%;
 	margin: auto;
+	background-color: blue;
 	
 	
 
@@ -224,17 +225,21 @@ h2 {
 	display: -moz-flex;
  	display: flex;
  	margin-top: 100px;
- 	width: 90%;
+ 	width: 80%;
  	height: 50px;
  	margin-right: auto;
  	margin-left: auto;
+ 	background-color: red;
 
  }
  #container-titre-programme{
- 	width:68%;
+ 	width:65%;
  	height:100%;
  	flex: none;
- 	margin-right: 2%;
+ 	margin: auto;
+ 	background-color: green;
+ 	
+ 	
  	
  }
  #titre-programme{
@@ -258,6 +263,9 @@ h2 {
 	flex: none;
 	width: 30%;
 	height:100%;
+	margin: auto;
+	background-color: green;
+	
 	
  }
  #titre-news{
@@ -276,14 +284,16 @@ h2 {
  	height: 50px;
  	line-height: 50px;
 }
+
  #programme-accueil {
- 	width:68%;
+ 	
+ 	width:65%;
  	height: 800px;
  	flex: none;
  	background-color:#BDBDBD;
- 	margin-right: 2%;
- 	border-radius: 0 3px 3px 3px;
  	
+ 	border-radius: 0 3px 3px 3px;
+ 	margin: auto;
  	box-shadow: 0px 0.05px 5px black;
 
 
@@ -406,7 +416,7 @@ h2 {
 	
 }
 #container-optionsprogramme .optionsjeu .uneoptionjeu{
-	width: 30%;
+	width: 25%;
 	height: 50px;
 	margin: auto;
 	border: 1px solid #686868;
@@ -432,6 +442,8 @@ h2 {
  	border-radius: 0 3px 3px 3px;
  	box-shadow: 0px 0.05px 5px black;
  	background-color:#BDBDBD;
+ 	margin-right: auto;
+
  	
 
  	
