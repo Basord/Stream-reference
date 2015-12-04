@@ -9,7 +9,7 @@
         $viewers =   $mydata['viewers'];
     	}
 	}
-	echo $viewers;
+	//echo $viewers;
 global $wpdb;
 	
 $testbddboxes = $wpdb->get_results('SELECT * FROM wp_streams where wp_streams.id=0' , ARRAY_A) ;
